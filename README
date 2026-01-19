@@ -1,4 +1,34 @@
-Analiza potrošnje električne energije u EU – REST API
+Analiza potrošnje električne energije u EU
+
+Ovaj projekt analizira potrošnju električne energije u državama Europske unije korištenjem otvorenih podataka Eurostata. Sustav obuhvaća prikupljanje podataka iz CSV i JSON izvora, njihovu obradu i integraciju, pohranu u SQLite bazu podataka, izradu REST API-ja te analizu i vizualizaciju podataka u Jupyter Notebooku.
+
+Projekt uključuje:
+
+obradu energetskih i populacijskih podataka
+
+integraciju heterogenih izvora (CSV + JSON)
+
+bazu podataka (SQLite)
+
+REST servis (Flask)
+
+analizu ukupne potrošnje i potrošnje po stanovniku
+
+grafove i trendove
+
+Struktura projekta
+
+Pzap_projekt.ipynb – glavni notebook (obrada, integracija, analiza, grafovi)
+
+eurostat_energy.csv – energetski podaci (CSV)
+
+eurostat_population.json – populacija (JSON)
+
+eu_energy.db – SQLite baza
+
+api.py – Flask REST API
+
+README.md – dokumentacija projekta
 
 Ovaj dio projekta implementira REST servis za pristup integriranim podacima o potrošnji električne energije i populaciji u državama Europske unije. REST API omogućuje dohvat podataka iz SQLite baze podataka u JSON formatu te služi kao sučelje između baze i vanjskih aplikacija.
 
