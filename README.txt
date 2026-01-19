@@ -18,7 +18,7 @@ grafove i trendove
 
 Struktura projekta
 
-Pzap_projekt.ipynb – glavni notebook (obrada, integracija, analiza, grafovi)
+Pzap_projekt.ipynb – glavni notebook i dokumentacija (obrada, integracija, analiza, grafovi)
 
 eurostat_energy.csv – energetski podaci (CSV)
 
@@ -28,11 +28,6 @@ eu_energy.db – SQLite baza
 
 api.py – Flask REST API
 
-README.md – dokumentacija projekta
-
-Ovaj dio projekta implementira REST servis za pristup integriranim podacima o potrošnji električne energije i populaciji u državama Europske unije. REST API omogućuje dohvat podataka iz SQLite baze podataka u JSON formatu te služi kao sučelje između baze i vanjskih aplikacija.
-
-Servis je izrađen korištenjem Flask okvira i povezan je s bazom podataka koja sadrži integrirani skup energetskih i demografskih podataka.
 
 Pokretanje REST servisa
 
@@ -72,3 +67,6 @@ GET /energy/<country>/<year>
 Primjer:
 /energy/DE/2020
 Vraća zapise za odabranu državu i godinu.
+
+LINK NA REPOZITORI:
+https://github.com/aborjan1/Analiza-potro-nje-elektri-ne-energije-po-dr-avama-EU
