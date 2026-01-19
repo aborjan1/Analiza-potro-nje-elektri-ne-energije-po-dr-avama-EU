@@ -1,1 +1,60 @@
-Podaci preuzeti s Eurostat open data portala očistit će se i pripremiti za analizu. Analizirat će se potrošnja električne energije među državama Europske unije kroz više godina. Izračunat će se trendovi, prosječne vrijednosti i promjene potrošnje kroz vrijeme. Dobiveni rezultati prikazat će se pomoću grafova radi lakše usporedbe među državama.
+# Analiza potrošnje električne energije u EU – REST API
+
+Ovaj dio projekta implementira REST servis za pristup integriranim podacima o potrošnji električne energije i populaciji u državama Europske unije. REST API omogućuje dohvat podataka iz SQLite baze podataka u JSON formatu te služi kao sučelje između baze i vanjskih aplikacija.
+
+Servis je izrađen korištenjem Flask okvira i pristupa bazi podataka koja sadrži integrirani skup energetskih i demografskih podataka.
+
+---
+
+## Pokretanje REST servisa
+
+Prije pokretanja potrebno je imati instaliran Python 3.10+ i sljedeće biblioteke:
+
+```bash
+pip install pandas flask
+
+```bash
+python api.py
+
+```bash
+http://127.0.0.1:5000
+
+Opis REST servisa
+
+REST servis omogućuje dohvat podataka iz baze eu_energy.db koja sadrži tablicu s integriranim energetskim i populacijskim podacima.
+
+Implementirane rute:
+
+Dohvat svih država
+GET /countries
+
+
+Vraća popis svih dostupnih država u bazi.
+
+Dohvat svih zapisa
+GET /energy
+
+
+Vraća sve integrirane zapise (država, godina, potrošnja, populacija).
+
+Dohvat podataka za određenu državu
+GET /energy/<country>
+
+
+Primjer:
+
+/energy/DE
+
+
+Vraća sve zapise za odabranu državu.
+
+Dohvat podataka za državu i godinu
+GET /energy/<country>/<year>
+
+
+Primjer:
+
+/energy/DE/2020
+
+
+Vraća zapise za odabranu državu i godinu.
